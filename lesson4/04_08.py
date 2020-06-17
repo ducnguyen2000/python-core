@@ -3,12 +3,14 @@
 import random
 list_len = int(input("Enter the length: "))
 a = []
-a.append(random.sample(range(100),list_len))
+for i in range(list_len):
+    a.append(random.randint(0,100))
+
 count = 0
 
 for i in range(len(a)):
-    for j in range(len(a)):
-        if a[i] > a[j] and i<j:
+    for j in range(i+1,len(a)):
+        if a[i] > a[j]:
             count += 1
 print(a)
 print("Number of elements when a[i] > a[j] and i < j: ",count)

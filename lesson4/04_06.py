@@ -5,7 +5,7 @@
 my_list = [1, 2, 2, "Hello", "!", "World", 5, 6, "Wow", "!python!"]
 count = 0
 for i in my_list:
-    if type(i) is not int and len(i) >= 2 and i[0].lower() == i[-1].lower():
+    if type(i) is str and len(i) >= 2 and i[0].lower() == i[-1].lower():
         count += 1
 
 print("Total: ", count)
